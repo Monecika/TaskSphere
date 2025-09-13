@@ -1,0 +1,743 @@
+{
+	"info": {
+		"_postman_id": "81e236a8-0e06-40d5-aa8a-57a38548ffc7",
+		"name": "taskSphere",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45127823"
+	},
+	"item": [
+		{
+			"name": "teams",
+			"item": [
+				{
+					"name": "create team",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtb25hX2FkbWluIiwicm9sZSI6IkFETUlOIiwidXNlcklEIjoiY2I4MGRmYmQtOTY5NS00YmI2LThjZmYtYzkwZjQ5OTY5MjY5IiwiaWF0IjoxNzU2NjQ2MDcwLCJleHAiOjE3NTY2NDY5NzB9.IEiuxmptMnFDT1_Ems5a3LN7D3aHT0oVzjDBgkJQsok",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"monaTeams1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/apiservice/teams",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"apiservice",
+								"teams"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtb25hX2FkbWluIiwicm9sZSI6IkFETUlOIiwidXNlcklEIjoiY2I4MGRmYmQtOTY5NS00YmI2LThjZmYtYzkwZjQ5OTY5MjY5IiwiaWF0IjoxNzU2NjQ2MDcwLCJleHAiOjE3NTY2NDY5NzB9.IEiuxmptMnFDT1_Ems5a3LN7D3aHT0oVzjDBgkJQsok",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"monaTeams1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/apiservice/teams",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"apiservice",
+								"teams"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtb25hIiwicm9sZSI6IkVNUExPWUVFIiwidXNlcklEIjoiY2I4MGRmYmQtOTY5NS00YmI2LThjZmYtYzkwZjQ5OTY5MjY4IiwiaWF0IjoxNzU2NjQ4MDYzLCJleHAiOjE3NTY2NDg5NjN9.erE6dyISEujYNFqSe5oxhYgtjuEBwOuyB3jXCVmnxng\"",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/apiservice/teams/00000000-0000-0000-0000-000000000002",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"apiservice",
+								"teams",
+								"00000000-0000-0000-0000-000000000002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update team",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtb25hX2FkbWluIiwicm9sZSI6IkFETUlOIiwidXNlcklEIjoiY2I4MGRmYmQtOTY5NS00YmI2LThjZmYtYzkwZjQ5OTY5MjY5IiwiaWF0IjoxNzU2NjQ4MTM3LCJleHAiOjE3NTY2NDkwMzd9.1LEksLP8U3dvW2myASQ9zrZLl6X43H6YYp0BNhg2Bz0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"test_update\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/apiservice/teams/00000000-0000-0000-0000-000000000002",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"apiservice",
+								"teams",
+								"00000000-0000-0000-0000-000000000002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get team users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtb25hX2FkbWluIiwicm9sZSI6IkFETUlOIiwidXNlcklEIjoiY2I4MGRmYmQtOTY5NS00YmI2LThjZmYtYzkwZjQ5OTY5MjY5IiwiaWF0IjoxNzU2ODg5MDQ0LCJleHAiOjE3NTY4ODk5NDR9.HolvkZczLQsKLBP4Fx0mBbSXg79OUX5jJmvcf1uXycg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/apiservice/teams/00000000-0000-0000-0000-000000000002/users",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"apiservice",
+								"teams",
+								"00000000-0000-0000-0000-000000000002",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user-teams",
+			"item": [
+				{
+					"name": "add user to team",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtb25hX21hbmFnZXIiLCJyb2xlIjoiTUFOQUdFUiIsInVzZXJJRCI6ImJlNmZmNDNmLTliZWEtNDlhZS05MzY3LTY2YjExYWNjZTE0MCIsImlhdCI6MTc1Nzc5MTcwMywiZXhwIjoxNzU3NzkyNjAzfQ.6CEqBPq_U2adjZYaOmsULbShQ5rFdH8D-UcC74DYJX4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/apiservice/user-teams/00000000-0000-0000-0000-000000000002/user/cb80dfbd-9695-4bb6-8cff-c90f49969269",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"apiservice",
+								"user-teams",
+								"00000000-0000-0000-0000-000000000002",
+								"user",
+								"cb80dfbd-9695-4bb6-8cff-c90f49969269"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user from team",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtb25hX2FkbWluIiwicm9sZSI6IkFETUlOIiwidXNlcklEIjoiY2I4MGRmYmQtOTY5NS00YmI2LThjZmYtYzkwZjQ5OTY5MjY5IiwiaWF0IjoxNzU3MDc0NDc4LCJleHAiOjE3NTcwNzUzNzh9.hI5jFUDJ4DJPVpLPPuYsGxNh_4kAMeaF3HuNqO6htfM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/apiservice/user-teams/00000000-0000-0000-0000-000000000002/user/cb80dfbd-9695-4bb6-8cff-c90f49969269",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"apiservice",
+								"user-teams",
+								"00000000-0000-0000-0000-000000000002",
+								"user",
+								"cb80dfbd-9695-4bb6-8cff-c90f49969269"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get team users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtb25hX2FkbWluIiwicm9sZSI6IkFETUlOIiwidXNlcklEIjoiY2I4MGRmYmQtOTY5NS00YmI2LThjZmYtYzkwZjQ5OTY5MjY5IiwiaWF0IjoxNzU3MDc0NDc4LCJleHAiOjE3NTcwNzUzNzh9.hI5jFUDJ4DJPVpLPPuYsGxNh_4kAMeaF3HuNqO6htfM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/apiservice/user-teams/00000000-0000-0000-0000-000000000001/users",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"apiservice",
+								"user-teams",
+								"00000000-0000-0000-0000-000000000001",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user teams",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtb25hX2FkbWluIiwicm9sZSI6IkFETUlOIiwidXNlcklEIjoiY2I4MGRmYmQtOTY5NS00YmI2LThjZmYtYzkwZjQ5OTY5MjY5IiwiaWF0IjoxNzU3MDc2MzE4LCJleHAiOjE3NTcwNzcyMTh9.utVwDbUVRfevHHloX3KT2Ilu-9yQLgFurCZw2niQXHc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/apiservice/user-teams/10000000-0000-0000-0000-000000000003/teams",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"apiservice",
+								"user-teams",
+								"10000000-0000-0000-0000-000000000003",
+								"teams"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tasks",
+			"item": [
+				{
+					"name": "create task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtb25hX21hbmFnZXIiLCJyb2xlIjoiTUFOQUdFUiIsInVzZXJJRCI6ImJlNmZmNDNmLTliZWEtNDlhZS05MzY3LTY2YjExYWNjZTE0MCIsImlhdCI6MTc1Nzc5MTM2NiwiZXhwIjoxNzU3NzkyMjY2fQ.qnyIjF8enj9E6p7r0O3HhhCdkEwGUqCnVOWIfWhxsvk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"New Task\",\r\n    \"status\": \"TODO\",\r\n    \"teamId\": \"767e0e61-09cc-4136-85ba-5e3121231d48\",\r\n    \"createdBy\": \"10000000-0000-0000-0000-000000000002\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/apiservice/tasks",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"apiservice",
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserTasks",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtb25hX21hbmFnZXIiLCJyb2xlIjoiTUFOQUdFUiIsInVzZXJJRCI6ImJlNmZmNDNmLTliZWEtNDlhZS05MzY3LTY2YjExYWNjZTE0MCIsImlhdCI6MTc1Nzc4NjEyMiwiZXhwIjoxNzU3Nzg3MDIyfQ.d9Ud_Xlb2utZhXuNW6apqqbR8ixy0LCaBb-ISQ5KLqU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/apiservice/tasks/assigned",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"apiservice",
+								"tasks",
+								"assigned"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getTeamTasks",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtb25hX21hbmFnZXIiLCJyb2xlIjoiTUFOQUdFUiIsInVzZXJJRCI6ImJlNmZmNDNmLTliZWEtNDlhZS05MzY3LTY2YjExYWNjZTE0MCIsImlhdCI6MTc1NzY2ODA0OSwiZXhwIjoxNzU3NjY4OTQ5fQ.CQfvHFsLsRaS8lwTy8AqFnojnn6eDE8Xjtol6LH8DZg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/apiservice/tasks/team/767e0e61-09cc-4136-85ba-5e3121231d48",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"apiservice",
+								"tasks",
+								"team",
+								"767e0e61-09cc-4136-85ba-5e3121231d48"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateTask",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtb25hX21hbmFnZXIiLCJyb2xlIjoiTUFOQUdFUiIsInVzZXJJRCI6ImJlNmZmNDNmLTliZWEtNDlhZS05MzY3LTY2YjExYWNjZTE0MCIsImlhdCI6MTc1NzY2ODU4NiwiZXhwIjoxNzU3NjY5NDg2fQ.mf3bUxmTz5N2e8dhbG70Ww_V3eOHyl2-FBc8O4rl_sg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": \"IN_PROGRESS\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/apiservice/tasks/b2c99228-cf01-45cc-ac16-dad0b1f72895/status",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"apiservice",
+								"tasks",
+								"b2c99228-cf01-45cc-ac16-dad0b1f72895",
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateTaskAssign",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtb25hX21hbmFnZXIiLCJyb2xlIjoiTUFOQUdFUiIsInVzZXJJRCI6ImJlNmZmNDNmLTliZWEtNDlhZS05MzY3LTY2YjExYWNjZTE0MCIsImlhdCI6MTc1NzY2OTAyMSwiZXhwIjoxNzU3NjY5OTIxfQ.8wgt4RT2gDhF_Ns4C6CO0meotqpl3hu0SpjwutRSvcs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"10000000-0000-0000-0000-000000000002\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/apiservice/tasks/b501106d-5bb2-4139-8091-ba1e56f56053/assign",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"apiservice",
+								"tasks",
+								"b501106d-5bb2-4139-8091-ba1e56f56053",
+								"assign"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "actuator",
+			"item": [
+				{
+					"name": "health check api",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/apiservice/actuator/health",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"apiservice",
+								"actuator",
+								"health"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "health check tasks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8082/taskservice/actuator/health",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"taskservice",
+								"actuator",
+								"health"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "health check teams",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8083/teamservice/actuator/health",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"teamservice",
+								"actuator",
+								"health"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "get user info",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtb25hIiwicm9sZSI6IkVNUExPWUVFIiwidXNlcklEIjoiY2I4MGRmYmQtOTY5NS00YmI2LThjZmYtYzkwZjQ5OTY5MjY4IiwiaWF0IjoxNzU0OTk4NzIzLCJleHAiOjE3NTQ5OTk2MjN9.L36shDIVpuMp3_2Xch4kuBaTm8kJLoFpli5a_cn4igM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/apiservice/users",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"apiservice",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user info by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtb25hX2FkbWluIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzU0OTEyNjgwLCJleHAiOjE3NTQ5MTM1ODB9.t98hqqmEipMz-l5TNenFOW9bA8Z8he1ucmIucylcego",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "id",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8081/apiservice/users/e6899de3-e5f7-000a-b20c-5e7c1901bba2",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"apiservice",
+								"users",
+								"e6899de3-e5f7-000a-b20c-5e7c1901bba2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"mona_manager\",\r\n    \"password\": \"mona\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/apiservice/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"apiservice",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtb25hX21hbmFnZXIiLCJyb2xlIjoiTUFOQUdFUiIsInVzZXJJRCI6ImJlNmZmNDNmLTliZWEtNDlhZS05MzY3LTY2YjExYWNjZTE0MCIsImlhdCI6MTc1NzY2OTI0NywiZXhwIjoxNzU3NjcwMTQ3fQ.o2COdrfPio7-BCzc_HDKLF8r13zsP1LH3KiRWlmOFKo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"mona\",\r\n    \"password\": \"mona\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/apiservice/logout",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"apiservice",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"mona1\",\r\n  \"email\": \"mona1@example.com\",\r\n  \"password\": \"mona\",\r\n  \"repeatedPassword\": \"mona\"\r\n  }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/apiservice/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"apiservice",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
