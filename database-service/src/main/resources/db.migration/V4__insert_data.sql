@@ -3,17 +3,16 @@ INSERT INTO teams (id, name)
 VALUES ('00000000-0000-0000-0000-000000000001', 'Alpha Team'),
        ('00000000-0000-0000-0000-000000000002', 'Beta Team'),
        ('767e0e61-09cc-4136-85ba-5e3121231d48', 'monaTeams'),
-       ('a2007c16-9782-4f94-98c0-23476ca3d784', 'monaTeams1'),
-       ('00000000-0000-0000-0000-000000000002', 'test_update');
+       ('a2007c16-9782-4f94-98c0-23476ca3d784', 'monaTeams1');
 
 -- Insert Users without team_id column
 INSERT INTO users (id, username, email, password, role)
-VALUES ('10000000-0000-0000-0000-000000000001', 'admin1', 'admin@example.com', 'admin123', 'ADMIN'),
-       ('10000000-0000-0000-0000-000000000002', 'manager1', 'manager@example.com', 'manager123', 'MANAGER'),
-       ('10000000-0000-0000-0000-000000000003', 'employee1', 'employee1@example.com', 'employee123', 'EMPLOYEE'),
-       ('cb80dfbd-9695-4bb6-8cff-c90f49969268', 'mona', 'mona@example.com', 'mona', 'EMPLOYEE'),
-       ('cb80dfbd-9695-4bb6-8cff-c90f49969269', 'mona_admin', 'mona_admin@example.com', 'mona', 'ADMIN'),
-       ('be6ff43f-9bea-49ae-9367-66b11acce140', 'mona_manager', 'ona_manager@example.com', 'mona', 'MANAGER');
+VALUES ('10000000-0000-0000-0000-000000000001', 'admin1', 'admin@example.com', '$2a$10$il9bRhNjkm0RTe61sP75COC2WHg7oueBguc.QE0i3cyRZ4TnxZ8pG', 'ADMIN'),
+       ('10000000-0000-0000-0000-000000000002', 'manager1', 'manager@example.com', '$2a$10$24jOvPsHLzbOoG/y5c9Y0OIwmvUAui/0JIdYcp4uwDfNbKh9O1.mS', 'MANAGER'),
+       ('10000000-0000-0000-0000-000000000003', 'employee1', 'employee1@example.com', '$2a$10$RJ/C/rCd.Tz94G5jflquTOJRmGAd37YfFJusdnW6oez3XtmDduYGC', 'EMPLOYEE'),
+       ('cb80dfbd-9695-4bb6-8cff-c90f49969268', 'mona', 'mona@example.com', '$2a$10$1esgqyBceLnuPHbcIEokH.UjPbgeN3YqpAliI51PERUTgVFSeOinu', 'EMPLOYEE'),
+       ('cb80dfbd-9695-4bb6-8cff-c90f49969269', 'mona_admin', 'mona_admin@example.com', '$2a$10$1esgqyBceLnuPHbcIEokH.UjPbgeN3YqpAliI51PERUTgVFSeOinu', 'ADMIN'),
+       ('be6ff43f-9bea-49ae-9367-66b11acce140', 'mona_manager', 'ona_manager@example.com', '$2a$10$1esgqyBceLnuPHbcIEokH.UjPbgeN3YqpAliI51PERUTgVFSeOinu', 'MANAGER');
 
 
 -- Insert Tasks

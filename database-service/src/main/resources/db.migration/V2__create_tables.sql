@@ -30,7 +30,7 @@ CREATE TABLE tasks
     id               UUID PRIMARY KEY      DEFAULT gen_random_uuid(),
     title            VARCHAR(100) NOT NULL,
     description      TEXT,
-    status           task_status  NOT NULL DEFAULT 'TODO',
+    status           VARCHAR(30)  NOT NULL DEFAULT 'TODO',
     assigned_user_id UUID,
     team_id          UUID,
     created_by       UUID         NOT NULL,

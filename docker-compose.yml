@@ -1,0 +1,46 @@
+version: '3.9'
+
+services:
+  database-service:
+    build: ./database-service
+    container_name: database-service
+    ports:
+      - "5432:5432"
+    networks:
+      - tasksphere-network
+
+  task-service:
+    build: ./task-service
+    container_name: task-service
+    ports:
+      - "8082:8080"
+    depends_on:
+      - database-service
+    networks:
+      - tasksphere-network
+
+  teams-service:
+    build: ./teams-service
+    container_name: teams-service
+    ports:
+      - "8083:8080"
+    depends_on:
+      - database-service
+    networks:
+      - tasksphere-network
+
+  api-service:
+    build: ./api-service
+    container_name: api-service
+    ports:
+      - "8081:8080"
+    depends_on:
+      - database-service
+      - task-service
+      - teams-service
+    networks:
+      - tasksphere-network
+
+networks:
+  tasksphere-network:
+    driver: bridge
