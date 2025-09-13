@@ -1,0 +1,86 @@
+openapi: 3.0.0
+info:
+  title: Login API
+  version: 1.0.0
+
+paths:
+  /login:
+    post:
+      summary: User Login
+      description: Authenticates a User
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginRequest'
+      responses:
+        '200':
+          description: 'Successful login'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LoginResponse'
+        '401':
+          description: 'Invalid Credentials'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+components:
+  schemas:
+    LoginRequest:
+      type: object
+      required:
+        - username
+        - password
+      properties:
+        username:
+          type: string
+          example: "johndoe"
+        password:
+          type: string
+          format: password
+          example: "secret123"
+
+    LoginResponse:
+      type: object
+      required:
+        - userId
+        - username
+        - role
+        - token
+      properties:
+        userId:
+          type: string
+          example: "aaaaa2a5-0aaa-4aaa-aaaa-aaaaaaaaaaaa"
+        username:
+          type: string
+          example: "mona"
+        role:
+          type: string
+          example: "EMPLOYEE"
+        token:
+          type: string
+          example: "token.example139889ygagsd"
+    ErrorResponse:
+      type: object
+      required:
+        - status
+        - code
+        - message
+        - suggestion
+      properties:
+        status:
+          type: integer
+          example: 400
+        code:
+          type: string
+          example: "BAD_REQUEST"
+        message:
+          type: string
+          example: "This is a message"
+        suggestion:
+          type: string
+          example: "This is a suggestion"
